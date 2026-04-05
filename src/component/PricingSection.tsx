@@ -64,7 +64,7 @@ export default function PricingSection() {
   return (
     <section className='py-20 bg-white font-dm-sans'>
       <div className='container text-center'>
-        <h2 className=' text-xl md:text-[40px] font-bold text-[#191D23] mb-4'>
+        <h2 className=' text-xl md:text-[36px] font-bold text-[#191D23] mb-4'>
           Airbnb Assistent <span className='text-primary'>pricing</span>
         </h2>
         <p className='text-[#191D23] md:text-[20px] mb-9'>

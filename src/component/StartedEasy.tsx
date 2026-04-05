@@ -50,7 +50,7 @@ const StartedEasy = () => {
                 </div>
 
                 {/* Icon Image */}
-                <div className='relative w-24 h-24 flex items-center justify-center'>
+                <div className='relative w-22 h-22 flex items-center justify-center'>
                   <Image
                     src={step.icon}
                     alt={step.title}
