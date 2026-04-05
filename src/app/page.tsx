@@ -1,6 +1,7 @@
 import Hero from '@/component/Hero';
 import PricingSection from '@/component/PricingSection';
 import ServicesSection from '@/component/ServicesSection';
+import ToolsSections from '@/component/ToolsSections';
 import TrustedBrand from '@/component/TrustedBrand';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <TrustedBrand />
       <ServicesSection />
       <PricingSection />
+      <ToolsSections />
     </div>
   );
 }

@@ -12,6 +12,7 @@
   --color-foreground: var(--foreground);
   --font-dm-sans: var(--font-dm-sans);
   --shadow-primary: 0 5px 10px -3px var(--color-primary);
+  --shadow-custom-pink: 0 4px 30.3px 0 rgba(255, 138, 168, 0.28);
 }
 
 @media (prefers-color-scheme: dark) {
