@@ -16,7 +16,7 @@ const TrustedBrand = () => {
   return (
     <section className=' py-5 md:py-10 mt-12'>
       <div className=' flex flex-col items-center'>
-        <h2 className=' px-5 text-[20px] font-semibold'>
+        <h2 className=' px-5 text-[20px] text-center font-semibold'>
           Trusted by leaders in 50+ industries
         </h2>
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react'; // npm install lucide-react
+import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
   {
@@ -37,7 +37,7 @@ const faqs = [
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0); // ডিফল্টভাবে প্রথম প্রশ্নটি খোলা থাকবে
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -45,18 +45,16 @@ export default function FAQSection() {
 
   return (
     <section className='py-5 md:py-10 font-dm-sans px-4'>
-      <div className='max-w-4xl mx-auto  p-8 md:p-16'>
-        {/* Header */}
+      <div className='max-w-4xl mx-auto  p-4 md:px-16'>
         <div className='text-center mb-16'>
-          <h2 className='text-4xl font-bold text-gray-900 mb-4'>
+          <h2 className=' text-2xl md:text-4xl font-bold text-gray-900 mb-4'>
             Frequently asked <span className='text-primary'>questions</span>
           </h2>
-          <p className=' text-[20px]'>
+          <p className=' md:text-[20px]'>
             Everything you need to know about the product and billing.
           </p>
         </div>
 
-        {/* Accordion List */}
         <div className='space-y-2'>
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
@@ -75,7 +73,6 @@ export default function FAQSection() {
                     {faq.question}
                   </span>
 
-                  {/* Plus/Minus Icon */}
                   <div
                     className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${isOpen ? 'border-primary  text-primary' : 'border-primary text-primary'}`}
                   >
@@ -86,8 +83,6 @@ export default function FAQSection() {
                     )}
                   </div>
                 </button>
-
-                {/* Answer Area (Animated) */}
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
                 >

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Check, X } from 'lucide-react';
+import Image from 'next/image';
 
 const pricingPlans = [
   {
@@ -61,12 +62,12 @@ export default function PricingSection() {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <section className='py-20 px-4 bg-white font-dm-sans'>
+    <section className='py-20 bg-white font-dm-sans'>
       <div className='container text-center'>
-        <h2 className='text-[40px] font-bold text-[#191D23] mb-4'>
+        <h2 className=' text-xl md:text-[40px] font-bold text-[#191D23] mb-4'>
           Airbnb Assistent <span className='text-primary'>pricing</span>
         </h2>
-        <p className='text-[#191D23] text-[20px] mb-9'>
+        <p className='text-[#191D23] md:text-[20px] mb-9'>
           Choose a plan that's right for you
         </p>
         <div className='flex items-center justify-center gap-4 mb-16 relative'>
@@ -89,31 +90,13 @@ export default function PricingSection() {
             Pay Yearly
           </span>
 
-          <div className='hidden md:block absolute left-[58%] top-0'>
-            <span className='text-primary text-sm font-medium flex items-center gap-2'>
-              <svg
-                width='40'
-                height='20'
-                viewBox='0 0 40 20'
-                fill='none'
-                className='rotate-12'
-              >
-                <path
-                  d='M1 18C10 18 20 5 38 2'
-                  stroke='#e94c77'
-                  strokeWidth='2'
-                  strokeLinecap='round'
-                />
-                <path
-                  d='M35 8L39 1L31 3'
-                  stroke='#e94c77'
-                  strokeWidth='2'
-                  strokeLinecap='round'
-                />
-              </svg>
-              Save 25%
-            </span>
+          <div className='hidden md:block absolute w-[101px] h-[75px]  left-[59%] top-[-20px] '>
+            <Image src={'/images/Arrow 2.png'} fill alt='cross' className=' object-contain ' />
           </div>
+
+          <span className='text-primary text-sm font-medium  items-center gap-2 hidden md:block absolute right-[28%] top-[20px]'>
+            Save 25%
+          </span>
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>

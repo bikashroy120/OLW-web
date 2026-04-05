@@ -1,62 +1,62 @@
 'use client';
 
-import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
-import { Star } from 'lucide-react';
+import { Autoplay, EffectCoverflow } from 'swiper/modules';
 
 // Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
+import SectionHeader from './shared/SectionHeader';
 
 const testimonials = [
   {
     name: 'Jenny Wilson',
-    image: '/images/user1.jpg',
-    review: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    image: '/images/users/Ellipse 21 (2).png',
+    review:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     name: 'Esther Howard',
-    image: '/images/user2.jpg',
-    review: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    image: '/images/users/Ellipse 21.png',
+    review:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     name: 'Robert Fox',
-    image: '/images/user3.jpg',
-    review: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    image: '/images/users/Ellipse 21 (1).png',
+    review:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
-    name: 'John Doe',
-    image: '/images/user4.jpg',
-    review: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    name: 'Jenny Wilson',
+    image: '/images/users/Ellipse 21 (2).png',
+    review:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    name: 'Esther Howard',
+    image: '/images/users/Ellipse 21.png',
+    review:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     name: 'Robert Fox',
-    image: '/images/user3.jpg',
-    review: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-  },
-  {
-    name: 'John Doe',
-    image: '/images/user4.jpg',
-    review: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    image: '/images/users/Ellipse 21 (1).png',
+    review:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
 ];
 
-const ReviewSection = () => {
+export default function ReviewSection() {
   return (
-    <section className='py-20 bg-[#f5f5f5]'>
-      {/* Header */}
-      <div className='text-center mb-12'>
-        <h2 className='text-3xl font-bold'>
-          Check Our Clients <span className='text-pink-500'>Review</span>
-        </h2>
-        <p className='text-gray-500 text-sm mt-3 max-w-xl mx-auto'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore.
-        </p>
+    <section className='py-20 '>
+      <div className=' mb-7'>
+        <SectionHeader
+          title='Check Our Clients'
+          colorTitle='Review'
+          subTitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+        />
       </div>
-
-      {/* Slider */}
       <Swiper
         modules={[EffectCoverflow, Autoplay]}
         effect='coverflow'
@@ -67,45 +67,41 @@ const ReviewSection = () => {
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 100,
+          depth: 0,
           modifier: 2.5,
           slideShadows: false,
         }}
-        className=' max-w-full mx-auto'
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          640: { slidesPerView: 1 },
+          1024: { slidesPerView: 3 },
+        }}
+        className=' mx-auto '
       >
         {testimonials.map((item, index) => (
           <SwiperSlide key={index}>
             {({ isActive }) => (
               <div
-                className={`transition-all duration-500 rounded-2xl p-6 text-center bg-white
-                ${
-                  isActive
-                    ? 'scale-110 shadow-xl opacity-100'
-                    : 'scale-105 opacity-100'
-                }`}
+                className={`transition-all mx-2 duration-500 my-4 rounded-2xl border p-6 flex flex-col justify-between]
+                ${isActive ? 'bg-white border-gray-200 shadow-md' : 'bg-[#F6F6F6] border-[#F6F6F6]'}`}
               >
-                {/* Avatar */}
-                <div
-                  className={`w-20 h-20 mx-auto rounded-full flex items-center justify-center ${item.bg}`}
-                >
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className='w-14 h-14 rounded-full object-cover'
-                  />
+                <div className=' flex items-center w-full gap-4'>
+                  <div className='relative w-20 h-20 rounded-full overflow-hidden  flex-shrink-0'>
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className='w-full h-full object-cover'
+                    />
+                  </div>
+
+                  <div className=' flex flex-col'>
+                    <h3 className='mt-4 font-semibold text-lg'>{item.name}</h3>
+                    <p className='text-gray-500 text-sm mt-2 leading-relaxed line-clamp-3'>
+                      {item.review}
+                    </p>
+                    <div className='text-yellow-400 mt-4 text-sm'>★★★★☆</div>
+                  </div>
                 </div>
-
-                {/* Name */}
-                <h3 className='mt-4 font-semibold text-lg'>{item.name}</h3>
-
-                {/* Text */}
-                <p className='text-gray-500 text-sm mt-2 leading-relaxed'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
-                {/* Stars */}
-                <div className='text-yellow-400 mt-3 text-sm'>★★★★☆</div>
               </div>
             )}
           </SwiperSlide>
@@ -113,6 +109,4 @@ const ReviewSection = () => {
       </Swiper>
     </section>
   );
-};
-
-export default ReviewSection;
+}

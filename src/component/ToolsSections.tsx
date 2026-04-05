@@ -26,8 +26,8 @@ const ToolsSections = () => {
       </div>
 
       <div className=' bg-[#F6F6F6] py-9 mt-20'>
-        <div className=' max-w-4xl mx-auto'>
-          <div className=' grid md:grid-cols-3 grid-cols-2 gap-5'>
+        <div className=' max-w-4xl px-4 mx-auto'>
+          <div className=' grid md:grid-cols-3 grid-cols-1 gap-5'>
             {images.map((item, index) => {
               return (
                 <div

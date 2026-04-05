@@ -8,7 +8,7 @@ const teamMembers = [
 
 const StillHaveQuestions = () => {
   return (
-    <section className='py-16 bg-gray-50/50 font-dm-sans px-4'>
+    <section className='py-10  font-dm-sans px-4'>
       <div className='max-w-5xl mx-auto text-center flex flex-col items-center'>
         <div className='flex -space-x-4 mb-8'>
           {teamMembers.map((member, index) => (
@@ -36,7 +36,7 @@ const StillHaveQuestions = () => {
           team.
         </p>
 
-        <button className='bg-primary text-white px-7 py-3 rounded-lg font-bold text-sm flex items-center gap-2 hover:bg-primary/90 transition shadow-lg shadow-primary/10 active:scale-95'>
+        <button className='bg-primary text-white px-7 mb-10 py-3 rounded-lg font-bold text-sm flex items-center gap-2 hover:bg-primary/90 transition shadow-lg shadow-primary/10 active:scale-95'>
           Get in touch
         </button>
       </div>

@@ -32,14 +32,14 @@ const features = [
 const StartedEasy = () => {
   return (
     <section className=' py-5 md:py-10'>
-      <div className='max-w-4xl mx-auto'>
+      <div className='max-w-4xl p-4 mx-auto'>
         <SectionHeader
           title='Getting Started is'
           colorTitle='Easy'
           subTitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
         />
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 mt-14'>
+        <div className='grid grid-cols-1 p-5 md:grid-cols-3 gap-16 md:gap-8 mt-14'>
           {steps.map((step) => (
             <div key={step.id} className='flex flex-col items-center'>
               <div className='relative w-full aspect-[4/3] bg-white border border-[#FDEBF0] rounded-xl  flex items-center justify-center mb-8'>
