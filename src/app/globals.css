@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -7,9 +7,11 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-brand-accent: #ED3C6A;
+  --color-brand-gray: #1e1e1e;
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-dm-sans: var(--font-dm-sans);
+  --shadow-primary: 0 5px 10px -3px var(--color-brand-accent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +24,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans);
 }
