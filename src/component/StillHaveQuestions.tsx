@@ -27,11 +27,11 @@ const StillHaveQuestions = () => {
           ))}
         </div>
 
-        <h3 className='text-xl font-bold text-[#101828] mb-3 leading-tight'>
+        <h3 className='text-xl font-bold text-[#101828] mb-3 '>
           Still have Questions?
         </h3>
 
-        <p className='text-[#9C9C9C] mb-10 max-w-sm leading-relaxed text-[18px]'>
+        <p className='text-[#9C9C9C] mb-10 text-[18px]'>
           Can’t find the answer you’re looking for? Please chat to our friendly
           team.
         </p>
