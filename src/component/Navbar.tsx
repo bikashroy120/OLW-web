@@ -42,8 +42,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`text-sm lg:text-base font-medium transition-colors ${
                     link.active
-                      ? 'text-brand-accent relative after:absolute after:bottom-[-5px] after:left-0 after:w-full after:h-[2px] after:bg-brand-accent'
-                      : 'text-brand-gray hover:text-brand-accent'
+                      ? 'text-primary relative after:absolute after:bottom-[-5px] after:left-0 after:w-full after:h-[2px] after:bg-primary'
+                      : 'text-brand-gray hover:text-primary'
                   }`}
                 >
                   {link.name}
@@ -107,8 +107,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`block px-3 py-2 rounded-md text-[18px] font-medium ${
                     link.active
-                      ? 'bg-brand-accent/10 text-brand-accent'
-                      : 'text-brand-gray hover:bg-gray-50 hover:text-brand-accent'
+                      ? 'bg-primary/10 text-primary'
+                      : 'text-brand-gray hover:bg-gray-50 hover:text-primary'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -117,7 +117,7 @@ export default function Navbar() {
               ))}
 
               <div className='pt-2'>
-                <button className='w-full bg-brand-accent text-white px-5 py-3 rounded-md text-base font-semibold flex items-center justify-center gap-2 hover:bg-brand-accent/90 transition'>
+                <button className='w-full bg-primary text-white px-5 py-3 rounded-md text-base font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 transition'>
                   Schedule A Meeting
                   <svg
                     xmlns='http://www.w3.org/2000/svg'

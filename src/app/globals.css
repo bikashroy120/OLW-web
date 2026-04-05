@@ -7,11 +7,11 @@
 
 @theme inline {
   --color-background: var(--background);
-  --color-brand-accent: #ED3C6A;
+  --color-primary: #ed3c6a;
   --color-brand-gray: #1e1e1e;
   --color-foreground: var(--foreground);
   --font-dm-sans: var(--font-dm-sans);
-  --shadow-primary: 0 5px 10px -3px var(--color-brand-accent);
+  --shadow-primary: 0 5px 10px -3px var(--color-primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +27,9 @@ body {
   font-family: var(--font-dm-sans);
 }
 
+@utility container {
+  @apply max-w-[1280px] mx-auto px-4;
+}
 
 /* animation of home page trusted brand */
 @keyframes scroll-left-smooth {
@@ -46,7 +49,6 @@ body {
     transform: translateX(0);
   }
 }
-
 
 /* Smooth continuous scroll */
 .animate-scroll-left-smooth {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ScheduleButton = () => {
   return (
-    <button className='bg-brand-accent text-white px-5 py-2.5 h-[50px] rounded-md text-sm font-semibold flex items-center gap-2 hover:bg-brand-accent/90 transition'>
+    <button className='bg-primary text-white px-5 py-2.5 h-[50px] rounded-md text-sm font-semibold flex items-center gap-2 hover:bg-primary/90 transition'>
       Schedule A Meeting
       <svg
         xmlns='http://www.w3.org/2000/svg'

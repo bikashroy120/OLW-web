@@ -1,4 +1,5 @@
 import Hero from '@/component/Hero';
+import ServicesSection from '@/component/ServicesSection';
 import TrustedBrand from '@/component/TrustedBrand';
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <Hero />
       <TrustedBrand />
+      <ServicesSection />
     </div>
   );
 }
