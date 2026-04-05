@@ -26,3 +26,35 @@ body {
   color: var(--foreground);
   font-family: var(--font-dm-sans);
 }
+
+
+/* animation of home page trusted brand */
+@keyframes scroll-left-smooth {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right-smooth {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* Smooth continuous scroll */
+.animate-scroll-left-smooth {
+  animation: scroll-left-smooth 25s linear infinite;
+  will-change: transform;
+}
+
+.animate-scroll-right-smooth {
+  animation: scroll-right-smooth 25s linear infinite;
+  will-change: transform;
+}
